@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Personality Quiz</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+  <header class="selfcare-header" id="selfcare-header">
+    <h4>THE S-E-L-F-C-A-R-E ASSESSMENT</h4>
+    <img src="persu.png" alt="Self-care image">
+  </header>
+
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      function hideHeader() {
+        var headerElement = document.getElementById("selfcare-header");
+        if (headerElement) {
+          headerElement.style.display = "none";
+        } else {
+          console.error("Element with id 'selfcare-header' not found.");
+        }
+      }
+    });
+  </script>
+
+
+
+  <div id="quizContent">
+    <div class="quiz-container" id="quiz-container">
+      <div class="question-meta">
+        <span id="question-number">Question 1 of 30</span>
+        <span class="brand">| PERSU Goals® | The SELFCARE Assessment</span>
+      </div>
+      <div class="question-text" id="question-text">
+      </div>
+
+      <div class="scale-options" id="scale-options">
+      </div>
+
+      <div class="navigation">
+        <button id="backBtn" disabled>&lt; BACK</button>
+        <button id="nextBtn">NEXT &gt;</button>
+      </div>
+    </div>
+  </div>
+
+
+  <div id="chartArea" class="hidden">
+    <img src="option.png" class="hidden" id="option">
+    <div id="chartContainer" class="hidden">
+      <canvas id="resultChart" width="600" height="600"></canvas>
+    </div>
+  </div>
+
+  <footer class="persu-footer">
+    <p>© 2025 PERSU Goals. All Rights Reserved.</p>
+  </footer>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="script.js"></script>
+  <script src="chart.js"></script>
+  <script src="calculation.js"></script>
+</body>
+
+</html>
